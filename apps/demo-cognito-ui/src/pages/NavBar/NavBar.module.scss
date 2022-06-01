@@ -1,0 +1,31 @@
+@import './src/styles/variables';
+
+.navBar{
+  display: flex;
+  width: 100%;
+  height: 56px;
+  padding: 0 24px 0 64px ;
+  justify-content: space-between;
+  font-size: $font-xlg;
+  background: $color-dark-green;
+  align-items: center;
+
+  .logo{
+    font-size: $font-form-header;
+  }
+
+  .navLink{
+    color: $color-white;
+    &:hover{
+      color: $color-light-grey;
+    }
+  }
+
+  div{
+    .navLink{
+      &:last-child{
+        margin-left: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<div class="app-list-block">
+  <h2>Available apps in blueprints.solutions</h2>
+
+  <mat-slide-toggle
+    color="primary"
+    [checked]="true"
+    (click)="changeType()"
+    class="type-button"
+  >
+    Develop mode
+  </mat-slide-toggle>
+  <button
+    class="item-app"
+    mat-stroked-button
+    [matMenuTriggerFor]="menu"
+    [matMenuTriggerData]="{ appData: app }"
+    #menuTrigger
+    *ngFor="let app of appsList"
+  >
+    <div class="button-app-label">
+      <span>{{ app.name }}</span>
+    </div>
+  </button>
+</div>
+
+<mat-menu #menu class="item-app-menu" xPosition="after" yPosition="below">
+  <ng-template matMenuContent let-chooseApp="appData">
+    <button
+      class="menu-button"
+      mat-menu-item
+    >
+      <i class="material-icons">link</i>
+      <a href="{{ devType ? chooseApp.linkDev : chooseApp.linkProd }}">
+        <span class="menu-button-label">Open app</span>
+      </a>
+    </button>
+    <button
+      class="menu-button"
+      mat-menu-item
+      *ngIf="devType ? chooseApp.isHealthDev : chooseApp.isHealthProd"
+      [routerLink]="['./health', devType ? chooseApp.healthDev : chooseApp.healthProd]"
+    >
+      <i class="material-icons">health_and_safety</i>
+      <p class="menu-button-label">Show information</p>
+    </button>
+  </ng-template>
+</mat-menu>

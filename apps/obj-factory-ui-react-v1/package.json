@@ -1,0 +1,9 @@
+{
+  "name": "obj-factory-ui-react-v1",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/main.ts",
+  "directories": {
+    "test": "test"
+  }
+}

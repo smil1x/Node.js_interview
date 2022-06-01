@@ -1,0 +1,40 @@
+@import 'src/styles/variables';
+.container {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 17px;
+	border-top: 1px solid $color-grey;
+}
+
+.title {
+	font-weight: $color-dark-grey;
+	line-height: $line-height-lg;
+	color: $text-color;
+	cursor: pointer;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 0;
+}
+
+.clearAllBtn {
+	font-weight: $font-weight;
+	text-transform: uppercase;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	color: $color-primary;
+}
+
+.switcherContainer {
+	display: flex;
+	align-items: center;
+}
+
+.switcherContainer input:not(:checked) ~ label {
+	color: $color-grey-2;
+}
+
+.optionText{
+	flex-grow: 1;
+	text-align: left;
+}

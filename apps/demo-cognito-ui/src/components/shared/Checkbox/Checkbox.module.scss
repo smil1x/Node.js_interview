@@ -1,0 +1,70 @@
+@import 'src/styles/variables';
+
+.container {
+  display: flex;
+  font-size: $font-lg;
+  font-weight: 400;
+  color: $color-logan;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  /* Hide the default checkbox */
+  input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    //When the checkbox is checked, change cursor for label and checkmark
+    &:disabled ~ .checkmark{
+      cursor: not-allowed;
+      background-color: $color-light-grey;
+    }
+    &:disabled ~ p{
+      cursor: not-allowed;
+    }
+
+      //When the checkbox is checked, add a green background
+    &:checked ~ .checkmark {
+      background-color: $color-green-sagebrush;
+
+      //Show the checkmark when checked
+      &:after{
+        display: block;
+      }
+    }
+  }
+
+  .label{
+    margin: 0;
+    font-weight: inherit;
+    font-size: inherit;
+    color: $color-logan;
+  }
+
+  /* A custom checkbox */
+  .checkmark {
+    border-radius: $checkmark-border-radius;
+    margin: 0 12px 0 0;
+    height: 20px;
+    width: 20px;
+    background-color: $color-dark-grey;
+
+    //Create the checkmark/indicator (hidden when not checked)
+    &:after {
+      content: '';
+      position: absolute;
+      display: none;
+
+      left: 6px;
+      width: 6px;
+      height: 12px;
+      border: solid $color-white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}

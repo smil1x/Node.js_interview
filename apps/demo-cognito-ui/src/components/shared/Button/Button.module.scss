@@ -1,0 +1,29 @@
+@import 'src/styles/variables';
+$secondary-border: 1px solid $color-grey;
+
+
+button{
+  font-weight: 500;
+  padding: 15px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+  font-size: $font-lg;
+  line-height: $line-height-base;
+  letter-spacing: $letter-spacing-increased;
+  border-width: 0;
+  outline: none;
+  text-transform: uppercase;
+  &:hover, &:focus{
+    opacity: 0.9;
+  }
+}
+.primary{
+  background-color: $color-green-sagebrush;
+  color: $color-white;
+}
+
+.secondary{
+  background-color: inherit;
+  border: $secondary-border;
+  color: $color-logan;
+}

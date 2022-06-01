@@ -1,0 +1,28 @@
+{
+  "include": [
+    "src",
+    "global.d.ts"
+  ],
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016"
+    ],
+    "jsx": "react",
+    "module": "commonjs",
+    "baseUrl": "./src",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "allowJs": true,
+    "checkJs": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "skipLibCheck": false
+  }
+}

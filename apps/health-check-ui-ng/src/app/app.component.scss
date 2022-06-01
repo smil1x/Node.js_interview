@@ -1,0 +1,56 @@
+$bottom-face: rgba(255,255,255,.2);
+$top-face: rgba(255,255,255,.1);
+$area: rgb(0, 0, 0, 0);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+
+  .loader {
+    position: relative;
+  }
+
+  .loader-bar {
+    position: absolute;
+  }
+
+  .content {
+    flex: 1;
+  }
+}
+
+.blueprint-paper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -999;
+  background-image:
+    linear-gradient(0deg,
+      $area 0, $area 9px,
+      $bottom-face 9px, $bottom-face 11px,
+      $area 10px, $area 19px,
+      $top-face 19px, $top-face 22px,
+      $area 20px, $area 29px,
+      $top-face 29px, $top-face 32px,
+      $area 30px, $area 39px,
+      $top-face 39px, $top-face 42px,
+      $area 40px, $area 49px,
+      $top-face 49px, $top-face 52px),
+    linear-gradient(-90deg,
+      $area 0, $area 9px,
+      $bottom-face 9px, $bottom-face 11px,
+      $area 10px, $area 19px,
+      $top-face 19px, $top-face 21px,
+      $area 20px, $area 29px,
+      $top-face 29px, $top-face 31px,
+      $area 30px, $area 39px,
+      $top-face 39px, $top-face 41px,
+      $area 40px, $area 49px,
+      $top-face 49px, $top-face 51px);
+  background-size: 51px 51px;
+}

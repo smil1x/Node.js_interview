@@ -1,0 +1,21 @@
+<mat-toolbar class="header">
+  <div
+    class="logo"
+    routerLink="/"
+  >
+    <h1>
+      <div><i class="material-icons">developer_board</i></div>
+      <b>BLUEPRINTS SOLUTIONS</b>
+    </h1>
+  </div>
+
+  <div class="header-btn-container">
+    <button
+      *ngIf="showLogout"
+      mat-stroked-button
+      (click)="logout()"
+    >
+      <i class="material-icons">logout</i>
+    </button>
+  </div>
+</mat-toolbar>

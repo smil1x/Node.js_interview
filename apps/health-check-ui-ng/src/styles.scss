@@ -1,0 +1,20 @@
+$background-color: rgba(222, 226, 229, 0.5);
+$font-color: #4b4b4b;
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: $background-color;
+  color: $font-color;
+
+  .mat-tooltip.tooltip {
+    font-size: 13px;
+  }
+
+  .app-list-menu-overlay {
+    margin-left: 205px;
+    margin-top: -20px;
+  }
+}

@@ -1,0 +1,51 @@
+$health-available-color: lightseagreen;
+$health-not-available-color: red;
+$text-color: #9b9b9b;
+$item-app-bg-color: white;
+
+.app-list-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .type-button {
+    margin: 15px 0;
+  }
+}
+
+.item-app {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 5px 5px;
+  width: 200px;
+  background-color: $item-app-bg-color;
+
+  .health-available {
+    color: $health-available-color;
+  }
+
+  .health-not-available {
+    color: $health-not-available-color;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all .2s ease-in-out;
+
+  &-label {
+    padding-left: 7px;
+  }
+}

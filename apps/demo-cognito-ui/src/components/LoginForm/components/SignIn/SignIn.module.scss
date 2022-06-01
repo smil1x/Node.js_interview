@@ -1,0 +1,10 @@
+@import '../../../../styles/variables';
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 20px;
+}
+

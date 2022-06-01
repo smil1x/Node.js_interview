@@ -1,0 +1,12 @@
+$footer-color: #5d6b80;
+$footer-bg-color: rgba(255, 255, 255, 0);
+
+.footer {
+  display: flex;
+  justify-content: end;
+  font-size: 18px;
+  font-weight: bold;
+  color: $footer-color;
+  padding: 15px 15px 0 20px;
+  background-color: $footer-bg-color;
+}

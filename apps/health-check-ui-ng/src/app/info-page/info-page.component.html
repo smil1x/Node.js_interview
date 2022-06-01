@@ -1,0 +1,128 @@
+<div
+  class="info-block"
+  *ngIf="appData; else error"
+>
+  <div class="return-button">
+    <button mat-button routerLink="/">
+      <i class="material-icons">keyboard_return</i>
+    </button>
+  </div>
+
+  <div *ngIf="appData.indicators" class="main-info-block">
+
+      <mat-card class="card-description">
+        <mat-card-title>
+          <i class="material-icons">description</i>
+          App Description
+        </mat-card-title>
+        <mat-card-content>
+          <p class="app-description">{{ appData.appDescription?.info }}</p>
+          <mat-divider [vertical]="true"></mat-divider>
+          <div class="app-stack">
+            <p>Technologies:</p>
+            <ul>
+              <li *ngFor="let item of appData.appDescription?.stack">{{ item }}</li>
+            </ul>
+          </div>
+        </mat-card-content>
+        <a class="app-link" mat-stroked-button href="https://{{appName}}.blueprints.solutions/api/docs"><i class="material-icons">link</i>Open app</a>
+      </mat-card>
+
+      <mat-card class="card-git">
+        <mat-card-title>
+          <i class="material-icons">info</i>
+          Git Information
+        </mat-card-title>
+        <mat-card-content>
+          <ul>
+            <li *ngFor="let item of appData.git | keyvalue">
+              <div class="git-content-headers">
+                <i class="material-icons">{{ gitInfoIcons[item.key] }}</i>
+                <span><b>{{ gitInfoKeys[item.key] }}</b></span>
+              </div>
+              <span class="git-content-items">{{ item.key === 'commitTime' ? (item.value | date:'EE, dd MMM YYYY hh:mm:ss z') : item.value }}</span>
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card-info">
+        <mat-card-title>
+          <i class="material-icons">memory</i>
+          RAM
+        </mat-card-title>
+        <mat-card-content class="card-info-ram">
+          <div class="ram-spin">
+            <div class="ram-value" >{{ info.RAM | lowercase }}</div>
+            <round-progress
+              [current]="getRamValue(info.RAM)"
+              [max]="100"
+              [color]="'#45ccce'"
+              [background]="'#eaeaea'"
+              [radius]="60"
+              [stroke]="15"
+              [rounded]="true"
+              [clockwise]="false"
+              [responsive]="true"
+              [duration]="1800"
+              [animation]="'easeInOutQuart'"
+              [animationDelay]="0"></round-progress>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card-info">
+        <mat-card-title>
+          <i class="material-icons">info</i>
+          Database
+        </mat-card-title>
+        <mat-card-content class="card-database">
+          <p>{{ info.Database | titlecase }}</p>
+
+          <div *ngIf="info.Database.includes('established'); else checkmark_error" >
+            <svg class="checkmark-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+              <circle class="checkmark-success-circle" cx="26" cy="26" r="25" />
+              <path class="svg-path" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+          </div>
+          <ng-template #checkmark_error>
+            <svg class="checkmark-error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+              <circle class="checkmark-error-circle" cx="26" cy="26" r="25" />
+              <path class="svg-path" d="M16 16 36 36 M36 16 16 36" />
+            </svg>
+          </ng-template>
+
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card-info">
+        <mat-card-title>
+          <i class="material-icons">timer</i>
+          OS Uptime
+        </mat-card-title>
+        <mat-card-content>
+          <p>{{ parseTime(timeOS) }}</p>
+          <p class="dateTime">Since: {{ dateTimeOS }}</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card-info">
+        <mat-card-title>
+          <i class="material-icons">timer</i>
+          App Uptime
+        </mat-card-title>
+        <mat-card-content>
+          <p>{{ parseTime(timeApp) }}</p>
+          <p class="dateTime">Since: {{ dateTimeApp }}</p>
+        </mat-card-content>
+      </mat-card>
+
+  </div>
+
+</div>
+
+<ng-template #error>
+  <div class="none">
+    {{ appData.err }}
+  </div>
+</ng-template>

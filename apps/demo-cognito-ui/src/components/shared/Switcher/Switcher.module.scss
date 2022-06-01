@@ -1,0 +1,44 @@
+@import 'src/styles/variables';
+
+$switcher-height: 12px;
+$switcher-width: 24px;
+$switcher-border: 1px;
+$switcher-border-radius: 12px;
+$switcher-color: $color-white;
+$switcher-background-off: $color-grey;
+$switcher-background-on: $color-primary;
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: $switcher-width;
+	height: $switcher-height;
+	background-color: $switcher-background-off;
+	border-radius: $switcher-border-radius;
+	margin-top: $switcher-height / 2;
+	cursor: pointer;
+}
+
+.switch::after {
+	content: '';
+	position: absolute;
+	width: $switcher-height - $switcher-border * 2;
+	height: $switcher-height - $switcher-border * 2;
+	border-radius: $switcher-border-radius;
+	background-color: $switcher-color;
+	top: $switcher-border;
+	left: $switcher-border;
+	transition: all 0.3s;
+}
+
+.checkbox:checked + .switch::after {
+	left: $switcher-width / 2 + $switcher-border;
+}
+
+.checkbox:checked + .switch {
+	background-color: $switcher-background-on;
+}
+
+.checkbox {
+	display: none;
+}

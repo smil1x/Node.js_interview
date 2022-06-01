@@ -1,0 +1,50 @@
+@import 'src/styles/variables';
+.popup {
+  position: fixed;
+  display: flex;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 0;
+  background-color: $color-popup-background;
+  z-index: 100;
+
+  .popup_inner {
+    position: relative;
+    margin: auto;
+  }
+
+  .close {
+    z-index: 10;
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    width: 14px;
+    height: 14px;
+    opacity: 1;
+    cursor: pointer;
+
+    &:hover{
+      opacity: 0.3;
+    }
+
+    &:before, &:after{
+      position: absolute;
+      content: ' ';
+      height: 14px;
+      width: 2px;
+      background-color: $color-logan;
+    }
+
+    &:before{
+      transform: rotate(45deg);
+    }
+
+    &:after{
+      transform: rotate(-45deg);
+    }
+  }
+
+}

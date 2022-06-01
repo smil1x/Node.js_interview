@@ -1,0 +1,30 @@
+@import './src/styles/variables';
+.container{
+  display: flex;
+  flex-direction: column;
+  & button:first-child{
+    margin-top: 36px;
+  }
+  &:before{
+    position: absolute;
+    content: ' ';
+    height: 1px;
+    width: 100%;
+    background-color: $color-dark-grey;
+    left: 0;
+  }
+
+  .socialButton{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    * {
+      margin: 0px;
+    }
+    .icon{
+      position: absolute;
+      left: 12px;
+    }
+  }
+}

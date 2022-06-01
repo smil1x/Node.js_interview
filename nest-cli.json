@@ -1,0 +1,193 @@
+{
+  "collection": "./schematics",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/app/tsconfig.app.json",
+    "plugins": [
+      {
+        "name": "@nestjs/swagger"
+      }
+    ]
+  },
+  "monorepo": true,
+  "root": "apps/obj-factory-v1-typeorm",
+  "sourceRoot": "apps/obj-factory-v1-typeorm/src",
+  "projects": {
+    "config": {
+      "type": "library",
+      "root": "libs/config",
+      "entryFile": "index",
+      "sourceRoot": "libs/config/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/config/tsconfig.lib.json"
+      }
+    },
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
+    "obj-factory-v1-prisma": {
+      "type": "application",
+      "root": "apps/obj-factory-v1-prisma",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-v1-prisma/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-v1-prisma/tsconfig.app.json"
+      }
+    },
+    "obj-factory-v1": {
+      "type": "application",
+      "root": "apps/obj-factory-v1",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-v1/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-v1/tsconfig.app.json"
+      }
+    },
+    "obj-factory-v1-typeorm": {
+      "type": "application",
+      "root": "apps/obj-factory-v1-typeorm",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-v1-typeorm/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-v1-typeorm/tsconfig.app.json"
+      }
+    },
+    "obj-factory-v1-file-storage": {
+      "type": "application",
+      "root": "apps/obj-factory-v1-file-storage",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-v1-file-storage/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-v1-file-storage/tsconfig.app.json"
+      }
+    },
+    "obj-factory-v1-multifile-storage": {
+      "type": "application",
+      "root": "apps/obj-factory-v1-multifile-storage",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-v1-multifile-storage/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-v1-multifile-storage/tsconfig.app.json"
+      }
+    },
+    "obj-viewer-api": {
+      "type": "application",
+      "root": "apps/obj-viewer-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-viewer-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-viewer-api/tsconfig.app.json"
+      }
+    },
+    "obj-factory-v1-grpc": {
+      "type": "application",
+      "root": "apps/obj-factory-v1-grpc",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-v1-grpc/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-v1-grpc/tsconfig.app.json",
+        "assets": [
+          "**/*.proto"
+        ],
+        "watchAssets": true
+      }
+    },
+    "obj-factory-v1-authn": {
+      "type": "application",
+      "root": "apps/obj-factory-v1-authn",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-v1-authn/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-v1-authn/tsconfig.app.json"
+      }
+    },
+    "obj-factory-v2-authn": {
+      "type": "application",
+      "root": "apps/obj-factory-v2-authn",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-v2-authn/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-v2-authn/tsconfig.app.json"
+      }
+    },
+    "obj-factory-v3-authn": {
+      "type": "application",
+      "root": "apps/obj-factory-v3-authn",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-v3-authn/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-v3-authn/tsconfig.app.json"
+      }
+    },
+    "obj-factory-ui-react-v1": {
+      "type": "application",
+      "root": "apps/obj-factory-ui-react-v1",
+      "entryFile": "main",
+      "sourceRoot": "apps/obj-factory-ui-react-v1/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/obj-factory-ui-react-v1/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "library",
+      "root": "libs/auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth/tsconfig.lib.json"
+      }
+    },
+    "blueprints": {
+      "type": "library",
+      "root": "libs/blueprints",
+      "entryFile": "index",
+      "sourceRoot": "libs/blueprints/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/blueprints/tsconfig.lib.json"
+    },
+    "health": {
+      "type": "library",
+      "root": "libs/health",
+      "entryFile": "index",
+      "sourceRoot": "libs/health/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/health/tsconfig.lib.json"
+      }
+    },
+    "logger": {
+      "type": "library",
+      "root": "libs/logger",
+      "entryFile": "index",
+      "sourceRoot": "libs/logger/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/logger/tsconfig.lib.json"
+      }
+    },
+    "s3-object-lambda": {
+      "type": "application",
+      "root": "lambdas/s3-object-lambda",
+      "entryFile": "index",
+      "sourceRoot": "lambdas/s3-object-lambda/src",
+      "compilerOptions": {
+        "tsConfigPath": "lambdas/s3-object-lambda/tsconfig.app.json",
+        "webpackConfigPath": "lambdas/s3-object-lambda/webpack.config.js"
+      }
+    },
+    "aws": {
+      "type": "library",
+      "root": "libs/aws",
+      "entryFile": "index",
+      "sourceRoot": "libs/aws/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/aws/tsconfig.lib.json"
+      }
+    }
+  }
+  }
+}

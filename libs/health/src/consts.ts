@@ -1,0 +1,3 @@
+// Custom Provider Token
+export const APP_DESCRIPTION = 'APP_DESCRIPTION';
+export const TEST_DB_CONNECTION_CALLBACK = 'TEST_DB_CONNECTION_CALLBACK';

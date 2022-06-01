@@ -1,0 +1,31 @@
+@import 'variables';
+
+.ag-theme-alpine .ag-header {
+  border-bottom: none !important;
+}
+
+.layout{
+  padding: $layout-padding;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.formName{
+  margin: 0;
+  font-size: $font-form-header;
+  font-weight: 600;
+  line-height: $line-height-lg;
+  color: $color-black;
+  text-transform: none;
+}
+
+.formDescription{
+    font-size: $font-lg;
+    color: $color-logan;
+    margin-bottom: 23px;
+    margin-top: 8px;
+    line-height: $line-height-md;
+}

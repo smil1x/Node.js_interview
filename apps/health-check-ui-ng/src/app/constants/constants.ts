@@ -1,0 +1,9 @@
+export const APP_PARAM = 'appName';
+export const OS_UPTIME = 'OS uptime';
+export const APP_UPTIME = 'App uptime';
+export const DEV_TYPE = 'dev';
+export const DEVELOP_LABEL = 'Develop';
+export const PRODUCTION_LABEL = 'Production';
+export const APP_HEALTH_DATA_MISS = 'none';
+export const EMPTY = 'empty';
+export const TITLE = 'health-check-ui-ng';

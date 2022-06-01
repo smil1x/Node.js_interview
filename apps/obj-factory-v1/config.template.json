@@ -1,0 +1,10 @@
+{
+  "PG_CONFIG": {
+    "DATABASE_HOST": "",
+    "DATABASE_PORT": 5432,
+    "DATABASE_USERNAME": "",
+    "DATABASE_PASSWORD": "",
+    "DATABASE_NAME": ""
+  },
+  "APP_PORT": 3000
+}

@@ -1,0 +1,20 @@
+FROM node:14.18.1
+
+USER root
+
+ENV no_proxy "127.0.0.1,10.*,localhost,169.254.169.254"
+ENV NO_PROXY "127.0.0.1,10.*,localhost,169.254.169.254"
+
+RUN apt-get update
+RUN apt-get install -y zip curl git
+RUN curl -L  https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -o /usr/bin/jq && chmod u+x /usr/bin/jq
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+RUN apt-get install python3 -y
+RUN apt-get install python3-pip -y
+RUN pip3 install awscli
+
+RUN npm install -g node-gyp
+RUN npm install -g npm-audit@0.0.3
+
+RUN useradd -ms /bin/bash docker
+USER docker

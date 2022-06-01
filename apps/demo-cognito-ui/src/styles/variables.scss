@@ -1,0 +1,143 @@
+$font-family: 'Roboto', sans-serif;
+
+$font-base: 12px;
+$font-lg: 14px;
+$font-xlg: 16px;
+$font-subheading: 18px;
+$font-form-header: 20px;
+$font-xl: 24px;
+$font-heading: 30px;
+
+$font-weight: 600;
+
+$letter-spacing: 0.1px;
+$letter-spacing-md: 0.25px;
+$letter-spacing-increased: 1.25px;
+
+$line-height-sm: 16px;
+$line-height-base: 18px;
+$line-height-md: 20px;
+$line-height-lg: 24px;
+$line-height-xlg: 28px;
+$line-height-xl: 30px;
+$line-height-xxl: 36px;
+
+$color-pale-turquoise: #c8fff4;
+$color-dark-green: #005457;
+$color-black: #212121;
+$color-popup-background: rgba(0, 0, 0, 0.5);
+$color-red: #b00020;
+$text-color: $color-black;
+$color-white: #ffffff;
+$background-color-default: #f7f7f7;
+$color-blue: #30b6dd;
+$color-echo-blue: #acafbf;
+$color-pacific-blue: #16a2d9;
+$color-onahau: #c9ecf6;
+$color-green-sagebrush: #018786;
+$color-light-green-sagebrush: #019592;
+$color-primary: $color-green-sagebrush;
+$color-grey: #e0e0e0;
+$color-grey-2: #828282;
+$color-dark-grey: #ced0db;
+$color-light-grey: #e1e4f0;
+$color-logan: #666666;
+$color-ghost-white: #fafafc;
+
+$link-color: #0d47a1;
+$link-color-hover: #39c2d7;
+
+$layout-padding: 0px 20px 20px 20px;
+
+$checkmark-border-radius: 3px;
+$input-border-width: 1px;
+$input-border-width-on-hover: 2px;
+
+$moved-placeholder-padding: 0 3px;
+$moved-placeholder-font-size: $font-base;
+
+$transition: 0.3s;
+
+$text-disabled-color: $color-echo-blue;
+
+$bg-color-disabled: $color-ghost-white;
+$border-color-disabled: $color-light-grey;
+$dropdown-single-value-disabled-color: $text-disabled-color;
+$dropdown-indicator-color-disabled: $color-ghost-white;
+
+$min-dropdown-width: 150px;
+
+$dropdown-scroll-margin-right: 0px;
+$scroll-thumb-radius: 10px;
+$scroll-thumb-width: 6px;
+
+$dropdown-bg-color: $color-white;
+
+$dropdown-text-color: $text-color;
+$dropdown-text-item-color: $color-black;
+$dropdown-text-multi-value-label-color: $color-pacific-blue;
+
+$dropdown-indicator-color: $color-logan;
+$dropdown-indicator-transition: $transition;
+
+$dropdown-control-border-color: $color-dark-grey;
+$dropdown-control-border-color-disabled: $border-color-disabled;
+$dropdown-control-border-color-on-focus: $color-primary;
+$dropdown-control-bg-color-disabled: $bg-color-disabled;
+
+$dropdown-item-bg-color-on-hover: $color-pale-turquoise;
+$dropdown-multi-value-remove-color: $color-dark-grey;
+
+$dropdown-multi-value-border: 1px;
+$dropdown-multi-value-border-radius: 10px;
+$dropdown-multi-value-border-color: $color-onahau;
+
+$dropdown-border-radius: 3.5px;
+$dropdown--menu-border-radius: 0;
+$dropdown-text-padding: 13px 1px 18px 15px;
+$dropdown-text-padding-on-hover: 12px 0 17px 14px;
+
+:export {
+  fontBase: $font-base;
+  fontWeight: $font-weight;
+  letterSpacing: $letter-spacing;
+  letterSpacingIncreased: $letter-spacing-increased;
+  lineHeightBase: $line-height-base;
+  lineHeightLg: $line-height-lg;
+  dropdownBorderRadius: $dropdown-border-radius;
+  dropdownMenuBorderRadius: $dropdown--menu-border-radius;
+  dropdownTextColor: $dropdown-text-color;
+  dropdownBgColor: $dropdown-bg-color;
+  dropdownTextItemColor: $dropdown-text-item-color;
+  dropdownTextPadding: $dropdown-text-padding; //
+  dropdownTextPaddingOnHover: $dropdown-text-padding-on-hover;
+  dropdownTextSelectedItemColor: $text-color;
+  dropdownTextPlaceholderColor: $color-logan;
+  dropdownTextMultiValueLabelColor: $dropdown-text-multi-value-label-color;
+  dropdownIndicatorColor: $dropdown-indicator-color;
+  dropdownIndicatorColorDisabled: $dropdown-indicator-color-disabled;
+  dropdownIndicatorTransition: $dropdown-indicator-transition;
+  dropdownItemBgColorOnHover: $dropdown-item-bg-color-on-hover;
+  dropdownItemBgColorOnSelect: none;
+  dropdownControlBorderWidth: $input-border-width;
+  dropdownControlBorderWidthOnHover: $input-border-width-on-hover;
+  dropdownControlBorderColor: $dropdown-control-border-color;
+  dropdownControlBorderColorDisabled: $dropdown-control-border-color-disabled;
+  dropdownControlBorderColorOnFocus: $dropdown-control-border-color-on-focus;
+  dropdownControlBorderColorOnHover: $dropdown-control-border-color;
+  dropdownControlBgColorDisabled: $dropdown-control-bg-color-disabled;
+  dropdownMultiValueBorder: $dropdown-multi-value-border;
+  dropdownMultiValueBorderRadius: $dropdown-multi-value-border-radius;
+  dropdownMultiValueBorderColor: $dropdown-multi-value-border-color;
+  dropdownMultiValueRemoveColor: $dropdown-multi-value-remove-color;
+  dropdownSingleValueDisabledColor: $dropdown-single-value-disabled-color;
+  dropdownMinWidth: $min-dropdown-width;
+  dropdownMenuScrollThumbColor: $color-grey;
+  dropdownMenuScrollColor: $color-white;
+  dropdownMenuScrollThumbBorderRadius: $scroll-thumb-radius;
+  dropdownMenuScrollThumbBorderWidth: $scroll-thumb-width;
+  dropdownMenuScrollMarginRight: $dropdown-scroll-margin-right;
+  zIndexDropdown: 99;
+  movedPlaceholderPadding: $moved-placeholder-padding;
+  movedPlaceholderFontSize: $moved-placeholder-font-size;
+}

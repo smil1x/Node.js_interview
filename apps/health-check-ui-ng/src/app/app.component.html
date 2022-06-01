@@ -1,0 +1,14 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="loader">
+    <mat-progress-bar
+      *ngIf="loading" color="primary" mode="indeterminate" class="loader-bar">
+    </mat-progress-bar>
+  </div>
+
+  <div class="content" [@routeAnimations]="prepareRouter(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>
+<div class="blueprint-paper"></div>
